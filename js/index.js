@@ -14,9 +14,6 @@ navlinks.forEach((ele)=>{
     });
 });
 
-window.addEventListener('scroll',()=>{
-    body.style.backgroundColor = "red";
-});
 const image = document.querySelector('img');
 image.addEventListener('click',()=>{
     image.style.transform = "scale(1.4)";
@@ -34,3 +31,47 @@ window.addEventListener('resize',()=>{
 window.addEventListener('scroll',()=>{
     image.src = "img/fun-bus.jpg";
 });
+
+window.addEventListener('load',()=>{
+    alert("Welcome to fun bus beautiful website");
+});
+
+document.addEventListener('keydown',(ele)=>{
+    if(ele.key === 'r'){
+        alert("You have pressed R!");
+    }else{
+        alert(`You have pressed ${ele.key}`);
+    };
+});
+
+const body = document.querySelector('body');
+const logo = document.querySelector('.logo-heading');
+const navgation = document.querySelector('.nav');
+
+body.addEventListener("click", (e) => {
+  body.style.backgroundColor = 'lightblue';
+});
+
+logo.addEventListener("dblclick", (e) => {
+  logo.style.backgroundColor = 'hotpink';
+  e.stopPropagation();
+});
+
+navgation.addEventListener("click", (e) => {
+ navgation.style.border = '5px solid limegreen';
+  e.stopPropagation();
+});
+  
+const link = document.querySelector('.nav-link');
+link.addEventListener("click", (e) => {
+  console.log('click: ', e);
+  e.preventDefault();
+  
+});
+
+
+// const navbar = document.querySelector('.nav-link');
+// navbar.addEventListener('click',(ele)=>{
+//     ele.preventDefault();
+// });
+
